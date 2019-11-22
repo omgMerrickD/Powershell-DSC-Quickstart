@@ -1,0 +1,48 @@
+/*
+@TargetNode='localhost'
+@GeneratedBy=Sage
+@GenerationDate=11/21/2019 19:28:45
+@GenerationHost=DESKTOP-0B39PE2
+*/
+
+instance of MSFT_RoleResource as $MSFT_RoleResource1ref
+{
+ResourceID = "[WindowsFeature]WebServer";
+ Name = "Web-Server";
+ Ensure = "Present";
+ SourceInfo = "C:\\Users\\Sage\\Documents\\GitHub\\Powershell-DSC-Quickstart\\WebsiteTest.ps1::10::9::WindowsFeature";
+ ModuleName = "PsDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "WebsiteTest";
+};
+instance of MSFT_FileDirectoryConfiguration as $MSFT_FileDirectoryConfiguration1ref
+{
+ResourceID = "[File]WebsiteContent";
+ SourcePath = "c:\\test\\index.htm";
+ Ensure = "Present";
+ DestinationPath = "c:\\inetpub\\wwwroot";
+ SourceInfo = "C:\\Users\\Sage\\Documents\\GitHub\\Powershell-DSC-Quickstart\\WebsiteTest.ps1::16::9::File";
+ ModuleName = "PSDesiredStateConfiguration";
+
+ModuleVersion = "1.0";
+ ConfigurationName = "WebsiteTest";
+};
+instance of OMI_ConfigurationDocument
+
+                    {
+ Version="2.0.0";
+ 
+                        MinimumCompatibleVersion = "1.0.0";
+ 
+                        CompatibleVersionAdditionalProperties= {"Omi_BaseResource:ConfigurationName"};
+ 
+                        Author="Sage";
+ 
+                        GenerationDate="11/21/2019 19:28:45";
+ 
+                        GenerationHost="DESKTOP-0B39PE2";
+ 
+                        Name="WebsiteTest";
+
+                    };
